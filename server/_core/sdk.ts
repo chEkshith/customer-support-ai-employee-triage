@@ -30,13 +30,15 @@ const GET_USER_INFO_WITH_JWT_PATH = `/webdev.v1.WebDevAuthPublicService/GetUserI
 
 class OAuthService {
   constructor(private client: ReturnType<typeof axios.create>) {
+  if (ENV.oAuthServerUrl) {
     console.log("[OAuth] Initialized with baseURL:", ENV.oAuthServerUrl);
-    if (!ENV.oAuthServerUrl) {
-      console.error(
-        "[OAuth] ERROR: OAUTH_SERVER_URL is not configured! Set OAUTH_SERVER_URL environment variable."
-      );
-    }
+  } else if (process.env.NODE_ENV === "production") {
+    console.warn(
+      "[OAuth] OAUTH_SERVER_URL is not configured; login is disabled."
+    );
   }
+}
+
 
   private decodeState(state: string): string {
     return decodeOAuthState(state).redirectUri;
@@ -199,10 +201,7 @@ class SDKServer {
   async verifySession(
     cookieValue: string | undefined | null
   ): Promise<{ openId: string; appId: string; name: string } | null> {
-    if (!cookieValue) {
-      console.warn("[Auth] Missing session cookie");
-      return null;
-    }
+    if (!cookieValue) return null;
 
     try {
       const secretKey = this.getSessionSecret();
