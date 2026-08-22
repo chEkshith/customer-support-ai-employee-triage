@@ -118,6 +118,9 @@ importers:
       axios:
         specifier: ^1.12.0
         version: 1.12.2
+      better-sqlite3:
+        specifier: ^13.0.3
+        version: 13.0.3
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -138,7 +141,7 @@ importers:
         version: 17.2.3
       drizzle-orm:
         specifier: ^0.44.5
-        version: 0.44.6(@types/better-sqlite3@9.6.0)(better-sqlite3@13.0.3)(mysql2@3.15.1)
+        version: 0.44.6(better-sqlite3@13.0.3)(mysql2@3.15.1)
       embla-carousel-react:
         specifier: ^8.6.0
         version: 8.6.0(react@19.2.1)
@@ -2155,9 +2158,6 @@ packages:
 
   '@types/babel__traverse@7.28.0':
     resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
-
-  '@types/better-sqlite3@9.6.0':
-    resolution: {integrity: sha512-ZEEwBSgMu7GYJOynoagg5X9JbxfL6dTJDsgViJIqh67jV44kyOr9RXfmFjLK5rzC4MWssP06t9hu/JwGDnUbCg==}
 
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
@@ -6482,11 +6482,6 @@ snapshots:
     dependencies:
       '@babel/types': 7.28.4
 
-  '@types/better-sqlite3@9.6.0':
-    dependencies:
-      '@types/node': 24.7.0
-    optional: true
-
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
@@ -6795,7 +6790,6 @@ snapshots:
   better-sqlite3@13.0.3:
     dependencies:
       node-addon-api: 8.9.2
-    optional: true
 
   body-parser@1.20.3:
     dependencies:
@@ -7188,9 +7182,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.44.6(@types/better-sqlite3@9.6.0)(better-sqlite3@13.0.3)(mysql2@3.15.1):
+  drizzle-orm@0.44.6(better-sqlite3@13.0.3)(mysql2@3.15.1):
     optionalDependencies:
-      '@types/better-sqlite3': 9.6.0
       better-sqlite3: 13.0.3
       mysql2: 3.15.1
 
@@ -8247,8 +8240,7 @@ snapshots:
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
 
-  node-addon-api@8.9.2:
-    optional: true
+  node-addon-api@8.9.2: {}
 
   node-releases@2.0.23: {}
 
