@@ -19,6 +19,13 @@ A safe, grounded Tier-1 customer-support assistant that classifies requests, ret
 ---
 ![SupportPilot cover banner](./assets/supportpilot-cover-banner.png)
 
+## 🚀 Live Demo
+
+**Live Application:** [https://customer-support-ai-employee-triage.onrender.com](https://customer-support-ai-employee-triage.onrender.com/)
+
+The application is deployed on Render and can be accessed directly through the link above.
+
+> Click the link to try SupportPilot live — no setup required.
 
 ## ✨ What is SupportPilot?
 
