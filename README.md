@@ -17,6 +17,8 @@ A safe, grounded Tier-1 customer-support assistant that classifies requests, ret
 </div>
 
 ---
+![SupportPilot cover banner](./assets/supportpilot-cover-banner.png)
+
 
 ## ✨ What is SupportPilot?
 
@@ -80,7 +82,8 @@ All business decisions happen on the server. The frontend is responsible for pre
 │ Billing · Technical · Account Access · Other  │
 └───────────────────────────────────────────────┘
 ```
-
+## Architecture Diagram
+![SupportPilot Architecture Diagram](./assets/supportpilot-architecture.png)
 ### Technology choices
 
 | Layer | Technology | Purpose |
