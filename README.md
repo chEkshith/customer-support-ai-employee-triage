@@ -2,6 +2,7 @@
 
 # ✦ SupportPilot
 
+
 ### **Support, with receipts.**
 
 A safe, grounded Tier-1 customer-support assistant that classifies requests, retrieves trusted guidance, cites its sources, and knows when a human should step in.
