@@ -26,7 +26,7 @@ A safe, grounded Tier-1 customer-support assistant that classifies requests, ret
 
 The application is deployed on Render and can be accessed directly through the link above.
 
-> Click the link to try SupportPilot live — no setup required.
+> Click the link to try SupportPilot live — no setup required
 
 ## ✨ What is SupportPilot?
 
